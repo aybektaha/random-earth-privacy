@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Earth – Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #eaecf2;
+      --accent: #2563eb;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: rgba(0,0,0,0.07);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    /* Language switcher */
+    .lang-switch {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .lang-btn {
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Content sections */
+    .content { display: none; }
+    .content.active { display: block; }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 32px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 14px; color: var(--text); }
+    ul { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .card p { margin: 0; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ ENGLISH -->
+  <div id="en" class="content active">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Random Earth &nbsp;·&nbsp; Last updated: May 2025</p>
+
+    <div class="card">
+      <p>Random Earth is built to respect your privacy. We collect only what is necessary to provide the service, and we never sell your personal data.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Random Earth is developed and operated by <strong>Aybek Taha Atılgan</strong> as an individual developer. If you have any questions about this policy, please contact us at <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a>.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect the minimum information necessary to operate the app:</p>
+    <ul>
+      <li><strong>Anonymous device identifier</strong> — A randomly generated ID created by Firebase Anonymous Authentication. This identifier is stored on your device and survives reinstalls (via Keychain on iOS). It is never linked to your name, email, or any personal identity.</li>
+      <li><strong>Usage data</strong> — Your exploration fuel balance, daily login date, and welcome bonus status are stored in Firestore under your anonymous ID to synchronize your progress across sessions.</li>
+      <li><strong>App preferences</strong> — Your selected language, UI theme, home country, and interest preferences are stored locally on your device using SharedPreferences.</li>
+      <li><strong>Crash reports</strong> — If the app crashes, anonymized diagnostic data is sent to Firebase Crashlytics to help us identify and fix bugs.</li>
+    </ul>
+
+    <h2>3. Information We Do NOT Collect</h2>
+    <ul>
+      <li>We do not collect your name, email address, or phone number.</li>
+      <li>We do not collect precise GPS location from your device. Location coordinates you see in the app are randomly generated or selected by you.</li>
+      <li>We do not collect payment information. All purchases are handled entirely by Apple (App Store) and RevenueCat.</li>
+      <li>We do not share your data with third parties for advertising or marketing purposes.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>Random Earth uses the following third-party services. Each has its own privacy policy:</p>
+    <ul>
+      <li><strong>Firebase (Google)</strong> — Anonymous authentication and crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>Mapbox</strong> — Interactive map and globe rendering. Map tile requests are made through our backend, not directly from your device. <a href="https://www.mapbox.com/legal/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>Google Gemini API</strong> — AI-generated location descriptions and chat. Your questions are sent to our backend server and forwarded to Google's Gemini API. We do not store chat content. <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Terms</a></li>
+      <li><strong>Google AdMob</strong> — Advertising for free-tier users. AdMob may collect device identifiers for ad personalization according to its own policies. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>RevenueCat</strong> — Subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a></li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <p>Your anonymous usage data (fuel balance, login date) is retained in Firestore as long as your anonymous account exists. You can request deletion by contacting us at <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a>. We will delete your data within 30 days.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>Random Earth is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any privacy-related questions or data deletion requests, please contact:<br>
+    <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ TURKISH -->
+  <div id="tr" class="content">
+    <h1>Gizlilik Politikası</h1>
+    <p class="subtitle">Random Earth &nbsp;·&nbsp; Son güncelleme: Mayıs 2025</p>
+
+    <div class="card">
+      <p>Random Earth, gizliliğinize saygı göstermek amacıyla tasarlanmıştır. Yalnızca hizmetin sağlanması için gerekli minimum veriyi topluyoruz ve kişisel verilerinizi asla satmıyoruz.</p>
+    </div>
+
+    <h2>1. Geliştirici Bilgileri</h2>
+    <p>Random Earth, bireysel geliştirici olarak <strong>Aybek Taha Atılgan</strong> tarafından geliştirilmekte ve işletilmektedir. Bu politikayla ilgili sorularınız için <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a> adresinden bize ulaşabilirsiniz.</p>
+
+    <h2>2. Topladığımız Bilgiler</h2>
+    <p>Uygulamayı çalıştırmak için gereken minimum bilgileri topluyoruz:</p>
+    <ul>
+      <li><strong>Anonim cihaz tanımlayıcısı</strong> — Firebase Anonim Kimlik Doğrulama tarafından oluşturulan rastgele bir kimlik. Bu kimlik cihazınızda saklanır ve yeniden yüklemelerde korunur (iOS'ta Keychain aracılığıyla). Adınız, e-postanız veya herhangi bir kişisel kimliğinizle hiçbir zaman ilişkilendirilmez.</li>
+      <li><strong>Kullanım verisi</strong> — Keşif yakıt bakiyeniz, günlük giriş tarihiniz ve karşılama bonusu durumunuz, oturumlar arasında ilerlemenizi senkronize etmek amacıyla anonim kimliğiniz altında Firestore'da saklanır.</li>
+      <li><strong>Uygulama tercihleri</strong> — Seçilen dil, arayüz teması, ev ülkesi ve ilgi alanı tercihleriniz cihazınızda yerel olarak saklanır (SharedPreferences).</li>
+      <li><strong>Çökme raporları</strong> — Uygulama çökerse, hataları tespit etmemize ve düzeltmemize yardımcı olmak amacıyla anonimleştirilmiş tanılama verileri Firebase Crashlytics'e gönderilir.</li>
+    </ul>
+
+    <h2>3. Toplamadığımız Bilgiler</h2>
+    <ul>
+      <li>Adınızı, e-posta adresinizi veya telefon numaranızı toplamıyoruz.</li>
+      <li>Cihazınızdan hassas GPS konumu toplamıyoruz. Uygulamada gördüğünüz koordinatlar rastgele oluşturulur veya sizin tarafınızdan seçilir.</li>
+      <li>Ödeme bilgisi toplamıyoruz. Tüm satın almalar tamamen Apple (App Store) ve RevenueCat tarafından işlenir.</li>
+      <li>Verilerinizi reklam veya pazarlama amacıyla üçüncü taraflarla paylaşmıyoruz.</li>
+    </ul>
+
+    <h2>4. Üçüncü Taraf Hizmetler</h2>
+    <p>Random Earth aşağıdaki üçüncü taraf hizmetleri kullanmaktadır. Her birinin kendi gizlilik politikası bulunmaktadır:</p>
+    <ul>
+      <li><strong>Firebase (Google)</strong> — Anonim kimlik doğrulama ve çökme raporlama. <a href="https://firebase.google.com/support/privacy" target="_blank">Gizlilik Politikası</a></li>
+      <li><strong>Mapbox</strong> — Etkileşimli harita ve dünya küre görüntüleme. Harita tile istekleri cihazınızdan değil, backend sunucumuz üzerinden yapılır. <a href="https://www.mapbox.com/legal/privacy" target="_blank">Gizlilik Politikası</a></li>
+      <li><strong>Google Gemini API</strong> — Yapay zeka destekli konum açıklamaları ve sohbet. Sorularınız backend sunucumuza gönderilir ve oradan Google'ın Gemini API'sine iletilir. Sohbet içeriklerini saklamıyoruz. <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Koşullar</a></li>
+      <li><strong>Google AdMob</strong> — Ücretsiz kullanıcılar için reklamlar. AdMob, kendi politikaları doğrultusunda reklam kişiselleştirmesi için cihaz tanımlayıcıları toplayabilir. <a href="https://policies.google.com/privacy" target="_blank">Gizlilik Politikası</a></li>
+      <li><strong>RevenueCat</strong> — Abonelik yönetimi. <a href="https://www.revenuecat.com/privacy" target="_blank">Gizlilik Politikası</a></li>
+    </ul>
+
+    <h2>5. Veri Saklama</h2>
+    <p>Anonim kullanım verileriniz (yakıt bakiyesi, giriş tarihi), anonim hesabınız var olduğu sürece Firestore'da tutulur. Silme talebiniz için <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a> adresine ulaşabilirsiniz; verilerinizi 30 gün içinde sileriz.</p>
+
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Random Earth, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Bir çocuğun bize kişisel bilgi sağladığını düşünüyorsanız lütfen derhal bizimle iletişime geçin.</p>
+
+    <h2>7. Politika Değişiklikleri</h2>
+    <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikleri, sayfanın üstündeki "Son güncelleme" tarihini güncelleyerek kullanıcılara bildiririz. Değişikliklerin ardından uygulamayı kullanmaya devam etmek, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+
+    <h2>8. İletişim</h2>
+    <p>Gizlilikle ilgili sorularınız veya veri silme talepleriniz için:<br>
+    <a href="mailto:aybektahaai@gmail.com">aybektahaai@gmail.com</a></p>
+  </div>
+
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
